@@ -1,0 +1,34 @@
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      Count of Choords : {{chord_count}}
+    </div>
+  </div>
+</div>
+
+<div class="container text-center">
+  <div class="row">
+    <div class="col">
+      <app-indviual-chord *ngFor = "let chord of openChords ; let i = index"
+      [ochord] = chord
+      [index]  = i
+      ></app-indviual-chord>
+    </div>
+    <div class="col">
+     <h3>Description</h3>
+     <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
+<br>
+
+<div class="container text-left">
+  <div class="row">
+    <div class="col">
+  <button class = "btn btn-danger" (click)="deleteChord(index)">Delete Chords</button>
+</div>
+</div>
+</div>
+<br>
+<br>
